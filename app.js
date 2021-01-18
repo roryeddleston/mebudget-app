@@ -4,21 +4,6 @@
 
 /////////////////////////////
 
-// var h2 = document.querySelector("h2");
-// var isGreen = false;
-
-//     setInterval(function(){
-//     if (isGreen) {
-//         h2.style.background = "orange";
-//     } else {
-//         h2.style.background = "green";
-//     }
-//     isGreen = !isGreen;
-// }, 1000);
-
-
-
-
 var budgetController = (function() {
 
     var Expense = function(id, description, value) {
@@ -255,9 +240,6 @@ var UIController = (function() {
         }
     };
 
-    
-
-
     var nodeListForEach = function(list, callback) {
         for (var i = 0; i < list.length; i++) {
             callback(list[i], i);
@@ -272,7 +254,6 @@ var UIController = (function() {
                 description: document.querySelector(DOMstrings.inputDescription).value,
                 value: parseFloat(document.querySelector(DOMstrings.inputValue).value)
             };
-
         },
 
         addListItem: function(obj, type) {
@@ -341,8 +322,6 @@ var UIController = (function() {
             } else {
                 document.querySelector(DOMstrings.percentageLabel).textContent = '--';
             }
-
-
         },
 
         displayPercentages: function(percentages) {
@@ -357,7 +336,6 @@ var UIController = (function() {
                     current.textContent = '---';
                 }
             });
-           
         },
 
         displayDate: function() {
@@ -386,8 +364,6 @@ var UIController = (function() {
         document.querySelector(DOMstrings.inputBtn).classList.toggle('red');
 
     },
-    
-    
 
         getDOMstrings: function() {
                 return DOMstrings; 
@@ -484,7 +460,6 @@ var controller = (function(budgetCtrl, UICtrl) {
         // 6. Calculate and update percentages
 
         updatePercentages();
-
         } 
     };
 
@@ -516,7 +491,6 @@ var controller = (function(budgetCtrl, UICtrl) {
 
             updatePercentages();
         }
-
     }
 
     return {
@@ -530,12 +504,8 @@ var controller = (function(budgetCtrl, UICtrl) {
                 percentage: -1
             });
             setupEventListeners();
-            
-            
         }
     };
-
-
 
 })(budgetController, UIController);
 

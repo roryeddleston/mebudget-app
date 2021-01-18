@@ -109,7 +109,6 @@ body {
     border-radius: 3px;
 }
 
-
 /**********************************************
 *** BOTTOM PART
 **********************************************/
@@ -181,6 +180,7 @@ max-width: 150px;}
 .add__btn:focus { outline: none; }
 
 /***** LISTS *****/
+
 .container {
     margin: 60px 3vw;
 }
